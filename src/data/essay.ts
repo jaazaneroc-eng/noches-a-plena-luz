@@ -37,10 +37,34 @@ export type VideoBlock = {
   poster?: string;
 };
 
+/** Marcador del artista sobre el mapa aéreo. `top`/`left` en % de la imagen del mapa. */
+export type MapPin = {
+  top: number;
+  left: number;
+  /** Color del marcador (hex). */
+  color: string;
+};
+
+export type Artist = {
+  name: string;
+  /** Subtítulo breve (1 línea). */
+  role: string;
+  /** Descripción corta para la miniventana del mapa (1–2 líneas). */
+  teaser: string;
+  /** Qué foto del capítulo se usa como retrato en la miniventana (0 o 1). */
+  portrait: 0 | 1;
+  /** Encuadre del retrato (CSS object-position). */
+  portraitFocus?: string;
+};
+
 export type ChapterLayout = "stacked" | "diptych" | "diptych-offset";
 
 export type Chapter = {
   id: string;
+  /** Parte final de la dirección de la página del artista: /artistas/<slug> */
+  slug: string;
+  artist: Artist;
+  pin: MapPin;
   numeral: string;
   title: string;
   paragraphs: string[];
@@ -67,15 +91,31 @@ export const essay = {
   date: "Octubre – Noviembre 2026",
   location: "Centro Histórico de Trujillo, Perú",
   cover: img("porto_1.jpg"),
+  /** Fotografía aérea de la plaza usada como índice interactivo. */
+  map: {
+    src: img("mapa-plaza.jpg"),
+    width: 945,
+    height: 567,
+    title: "Nuestros artistas",
+    alt: "Vista aérea de la Plaza de Armas de Trujillo con el Monumento a la Libertad al centro",
+  },
   intro: [
     "Cuando cae la noche, el centro no se apaga: cambia de habitantes. Entre faroles y baldosas húmedas aparecen quienes hacen de la calle su taller, su escenario y su pista.",
-    "Este ensayo los acompaña en cinco capítulos. Cada uno reúne dos fotografías, un paisaje sonoro y, cuando existe, un fragmento en video. Pulsa cualquier imagen para verla a pantalla completa.",
+    "Este ensayo los acompaña en cinco capítulos. Elige a un artista en el mapa de la plaza para ver su sesión de fotos, escuchar su paisaje sonoro y, cuando existe, ver un fragmento en video.",
   ],
 };
 
 export const chapters: Chapter[] = [
   {
     id: "capitulo-1",
+    slug: "porto",
+    artist: {
+      name: "Porto",
+      role: "El observador del telescopio",
+      teaser: "Ofrece la Luna por unas monedas a los pies del Monumento a la Libertad.",
+      portrait: 0,
+    },
+    pin: { top: 40, left: 53, color: "#3E2B22" },
     numeral: "I",
     title: "El telescopio en la plaza",
     paragraphs: [
@@ -119,6 +159,14 @@ export const chapters: Chapter[] = [
   },
   {
     id: "capitulo-2",
+    slug: "jean",
+    artist: {
+      name: "Jean",
+      role: "El retratista nocturno",
+      teaser: "Dibuja rostros a carboncillo de espaldas al bullicio de la feria.",
+      portrait: 0,
+    },
+    pin: { top: 53, left: 33, color: "#7B1FA2" },
     numeral: "II",
     title: "El caballete nocturno",
     paragraphs: [
@@ -161,6 +209,14 @@ export const chapters: Chapter[] = [
   },
   {
     id: "capitulo-3",
+    slug: "carlos",
+    artist: {
+      name: "Carlos",
+      role: "Percusión en la acera",
+      teaser: "Toca una batería de tambores rescatados, sentado en la acera.",
+      portrait: 1,
+    },
+    pin: { top: 70, left: 65, color: "#388E3C" },
     numeral: "III",
     title: "Percusión en la acera",
     paragraphs: [
@@ -213,6 +269,15 @@ export const chapters: Chapter[] = [
   },
   {
     id: "capitulo-4",
+    slug: "lugo",
+    artist: {
+      name: "Lugo",
+      role: "Canto entre pasos fugaces",
+      teaser: "Canta contra una pared amarilla con su hijo dormido en brazos.",
+      portrait: 1,
+      portraitFocus: "center 55%",
+    },
+    pin: { top: 83, left: 73, color: "#E65100" },
     numeral: "IV",
     title: "Canto entre pasos fugaces",
     paragraphs: [
@@ -267,6 +332,15 @@ export const chapters: Chapter[] = [
   },
   {
     id: "capitulo-5",
+    slug: "briss",
+    artist: {
+      name: "Briss",
+      role: "Sobre ruedas en la noche",
+      teaser: "Convierte la plaza vacía en pista cuando cae la noche.",
+      portrait: 0,
+      portraitFocus: "center 35%",
+    },
+    pin: { top: 86, left: 86, color: "#6D4C41" },
     numeral: "V",
     title: "Sobre ruedas en la noche",
     paragraphs: [

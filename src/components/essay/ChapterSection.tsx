@@ -48,10 +48,10 @@ function Gallery({ chapter }: { chapter: Chapter }) {
 
 export function ChapterSection({ chapter }: { chapter: Chapter }) {
   return (
-    <section id={chapter.id} className="scroll-mt-12 border-t border-border pt-24 md:pt-32">
+    <section id={chapter.id} className="pt-28 md:pt-36">
       <Reveal className="reading">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
-          Capítulo {chapter.numeral}
+          Capítulo {chapter.numeral} · {chapter.artist.name}
         </p>
         <h2 className="mt-4 font-serif text-4xl font-normal leading-[1.08] tracking-tight text-foreground md:text-[3.25rem]">
           {chapter.title}
@@ -92,7 +92,7 @@ export function ChapterSection({ chapter }: { chapter: Chapter }) {
         </Reveal>
       )}
 
-      <div className="pb-24 md:pb-32" />
+      <div className="pb-20 md:pb-24" />
     </section>
   );
 }

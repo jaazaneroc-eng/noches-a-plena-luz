@@ -33,3 +33,4 @@ use the editor.
 - All photo-essay content (texts, photo/audio paths, EXIF, YouTube IDs) lives in `src/data/essay.ts`; components only render it, so editors change one file.
 - Essay media is served from `public/assets/images/` and `public/assets/audio/` by relative URL, because the author wants to swap local files by name.
 - Only one audio may play at a time: every player registers with `src/lib/audio-registry.ts` (covered by its test).
+- `/` is the aerial-map index of artists; each chapter renders alone at `/artistas/$slug`, so every artist has its own shareable page and the back button returns to the map. Pin positions are % of the map image, so the map canvas must keep the image's aspect ratio.

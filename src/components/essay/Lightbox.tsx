@@ -24,21 +24,28 @@ const pad = (n: number) => n.toString().padStart(2, "0");
 
 const chapterOf = (photo: Photo) => chapters.find((c) => c.photos.some((p) => p.id === photo.id));
 
-export function LightboxProvider({ children }: { children: ReactNode }) {
+/** `photos` limita el recorrido del visor (por defecto, todas las fotos del ensayo). */
+export function LightboxProvider({
+  children,
+  photos = allPhotos,
+}: {
+  children: ReactNode;
+  photos?: Photo[];
+}) {
   const [index, setIndex] = useState<number | null>(null);
   const [showInfo, setShowInfo] = useState(false);
   const lastFocus = useRef<HTMLElement | null>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const touchX = useRef<number | null>(null);
 
-  const total = allPhotos.length;
+  const total = photos.length;
 
   const open = useCallback((photoId: string) => {
-    const i = allPhotos.findIndex((p) => p.id === photoId);
+    const i = photos.findIndex((p) => p.id === photoId);
     if (i < 0) return;
     lastFocus.current = document.activeElement as HTMLElement | null;
     setIndex(i);
-  }, []);
+  }, [photos]);
 
   const close = useCallback(() => {
     setIndex(null);
@@ -73,14 +80,14 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (index === null) return;
     [index + 1, index - 1].forEach((i) => {
-      const p = allPhotos[(i + total) % total];
+      const p = photos[(i + total) % total];
       if (!p) return;
       const im = new Image();
       im.src = p.src;
     });
-  }, [index, total]);
+  }, [index, total, photos]);
 
-  const photo = index !== null ? allPhotos[index] : null;
+  const photo = index !== null ? photos[index] : null;
   const chapter = photo ? chapterOf(photo) : undefined;
 
   return (

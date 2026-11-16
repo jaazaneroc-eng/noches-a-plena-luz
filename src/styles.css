@@ -7,6 +7,8 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+/* Pantallas apaisadas: el mapa aéreo cubre toda la vista */
+@custom-variant wide (@media (min-aspect-ratio: 4/3));
 
 /*
  * Design system — "Craft / Notion dark" editorial.
@@ -44,9 +46,14 @@
 
   --color-surface: var(--surface);
   --color-surface-hover: var(--surface-hover);
+  --color-surface-active: var(--surface-active);
   --color-lightbox: var(--lightbox);
   --color-lamp: var(--lamp);
   --color-scrim: var(--scrim);
+
+  --shadow-pin: 0 2px 12px oklch(0 0 0 / 0.55);
+  --shadow-card: 0 24px 60px -12px oklch(0 0 0 / 0.7);
+  --shadow-float: 0 6px 20px -6px oklch(0 0 0 / 0.6);
 
   --max-width-reading: 740px;
 }
@@ -58,6 +65,7 @@
   --foreground: oklch(0.9401 0 0); /* #EBEBEB */
   --surface: oklch(0.2435 0 0); /* #202020 */
   --surface-hover: oklch(0.2686 0 0); /* #262626 */
+  --surface-active: oklch(0.2931 0 0); /* #2C2C2C */
   --border: oklch(0.3052 0 0); /* #2F2F2F */
   --muted-foreground: oklch(0.6895 0 0); /* #9B9B9B */
   --lightbox: oklch(0.1591 0 0); /* #0D0D0D */
@@ -165,6 +173,46 @@
   background-image: var(--gradient-video);
 }
 
+/* Aerial map canvas: keeps the image ratio so % pins never drift.
+ * Portrait/narrow: full width (contain). Landscape: covers the viewport. */
+@utility map-canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  aspect-ratio: var(--map-ratio);
+  translate: -50% -50%;
+  @media (min-aspect-ratio: 4/3) {
+    width: max(100%, calc(100svh * var(--map-ratio)));
+  }
+  /* Phones in portrait: zoom in on the plaza, where all the pins are */
+  @media (max-aspect-ratio: 3/4) {
+    width: 150%;
+    translate: -60% -50%;
+  }
+}
+
+@utility map-title-shadow {
+  text-shadow:
+    0 1px 2px oklch(0 0 0 / 0.6),
+    0 4px 24px oklch(0 0 0 / 0.55);
+}
+
+@keyframes pin-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  70%,
+  100% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}
+@utility pin-pulse {
+  animation: pin-pulse 2.6s cubic-bezier(0.2, 0.6, 0.3, 1) infinite;
+}
+
 /* Range inputs for the audio player */
 @utility range-thin {
   appearance: none;
@@ -248,6 +296,10 @@
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .pin-pulse {
+    animation: none;
+    opacity: 0;
   }
   .reveal {
     opacity: 1;

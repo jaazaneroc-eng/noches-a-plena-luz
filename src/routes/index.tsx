@@ -1,9 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ChapterSection } from "@/components/essay/ChapterSection";
-import { EssayChrome } from "@/components/essay/EssayChrome";
-import { EssayFooter, EssayHeader, EssayIntro } from "@/components/essay/EssayHeader";
-import { LightboxProvider } from "@/components/essay/Lightbox";
-import { chapters, essay } from "@/data/essay";
+import { EssayFooter, EssayIntro } from "@/components/essay/EssayHeader";
+import { MapIndex } from "@/components/essay/MapIndex";
+import { essay } from "@/data/essay";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,16 +19,12 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <LightboxProvider>
-      <EssayChrome />
-      <EssayHeader />
+    <>
+      <MapIndex />
       <main>
         <EssayIntro />
-        {chapters.map((c) => (
-          <ChapterSection key={c.id} chapter={c} />
-        ))}
       </main>
       <EssayFooter />
-    </LightboxProvider>
+    </>
   );
 }
