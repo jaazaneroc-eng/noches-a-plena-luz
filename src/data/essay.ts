@@ -334,8 +334,8 @@ export const chapters: Chapter[] = [
     id: "capitulo-5",
     slug: "briss",
     artist: {
-      name: "Briss",
-      role: "Sobre ruedas en la noche",
+      name: "Priss Azabache",
+      role: "\"La Dama del Asfalto\"",
       teaser: "Convierte la plaza vacía en pista cuando cae la noche.",
       portrait: 0,
       portraitFocus: "center 35%",
