@@ -271,8 +271,8 @@ export const chapters: Chapter[] = [
     id: "capitulo-4",
     slug: "lugo",
     artist: {
-      name: "Lugo",
-      role: "Canto entre pasos fugaces",
+      name: "Luis Lugo",
+      role: "\"La Voz Paternal\"",
       teaser: "Canta contra una pared amarilla con su hijo dormido en brazos.",
       portrait: 1,
       portraitFocus: "center 55%",
