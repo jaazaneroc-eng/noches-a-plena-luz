@@ -211,8 +211,8 @@ export const chapters: Chapter[] = [
     id: "capitulo-3",
     slug: "carlos",
     artist: {
-      name: "Carlos",
-      role: "Percusión en la acera",
+      name: "Carlos Antonio",
+      role: "\"Manos Imparables\"",
       teaser: "Toca una batería de tambores rescatados, sentado en la acera.",
       portrait: 1,
     },
