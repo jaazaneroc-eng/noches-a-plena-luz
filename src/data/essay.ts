@@ -161,8 +161,8 @@ export const chapters: Chapter[] = [
     id: "capitulo-2",
     slug: "jean",
     artist: {
-      name: "Jean",
-      role: "El retratista nocturno",
+      name: "Jean Carlo",
+      role: "\"El Pintor Errante\"",
       teaser: "Dibuja rostros a carboncillo de espaldas al bullicio de la feria.",
       portrait: 0,
     },
