@@ -110,8 +110,8 @@ export const chapters: Chapter[] = [
     id: "capitulo-1",
     slug: "porto",
     artist: {
-      name: "Porto",
-      role: "El observador del telescopio",
+      name: "Fernando Portocarrero",
+      role: "\"El Cazador de Astros\"",
       teaser: "Ofrece la Luna por unas monedas a los pies del Monumento a la Libertad.",
       portrait: 0,
     },
