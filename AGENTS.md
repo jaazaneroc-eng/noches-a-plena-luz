@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- All photo-essay content (texts, photo/audio paths, EXIF, YouTube IDs) lives in `src/data/essay.ts`; components only render it, so editors change one file.
+- Essay media is served from `public/assets/images/` and `public/assets/audio/` by relative URL, because the author wants to swap local files by name.
+- Only one audio may play at a time: every player registers with `src/lib/audio-registry.ts` (covered by its test).
