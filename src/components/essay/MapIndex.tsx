@@ -133,7 +133,7 @@ export function MapIndex() {
     const rect = canvas.getBoundingClientRect();
     const left = clamp(((e.clientX - rect.left) / rect.width) * 100);
     const top = clamp(((e.clientY - rect.top) / rect.height) * 100);
-    setPins((prev) => ({ ...prev, [slug]: { ...prev[slug], top, left } }));
+    setPins((prev) => ({ ...prev, [slug]: { ...prev[slug]!, top, left } }));
   };
 
   const handleDragEnd = () => {
@@ -148,7 +148,7 @@ export function MapIndex() {
   const copyPins = async () => {
     const snippet = chapters
       .map((c) => {
-        const p = pins[c.slug];
+        const p = pins[c.slug]!;
         return `${c.artist.name} → pin: { top: ${p.top}, left: ${p.left}, color: "${p.color}" },`;
       })
       .join("\n");
@@ -193,7 +193,7 @@ export function MapIndex() {
           <MapPin
             key={c.id}
             chapter={c}
-            pin={pins[c.slug]}
+            pin={pins[c.slug]!}
             editMode={editMode}
             onSelect={setSelected}
             onDragStart={handleDragStart}
@@ -244,7 +244,7 @@ export function MapIndex() {
             </p>
             <ul className="mt-3 space-y-1.5">
               {chapters.map((c) => {
-                const p = pins[c.slug];
+                const p = pins[c.slug]!;
                 return (
                   <li key={c.id} className="flex items-center justify-between gap-3 text-sm">
                     <span className="flex items-center gap-2 text-foreground">
