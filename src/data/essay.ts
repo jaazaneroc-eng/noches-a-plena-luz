@@ -115,7 +115,7 @@ export const chapters: Chapter[] = [
       teaser: "Ofrece la Luna por unas monedas a los pies del Monumento a la Libertad.",
       portrait: 0,
     },
-    pin: { top: 40, left: 53, color: "#3E2B22" },
+    pin: { top: 33, left: 48, color: "#3E2B22" },
     numeral: "I",
     title: "El telescopio en la plaza",
     paragraphs: [
@@ -166,7 +166,7 @@ export const chapters: Chapter[] = [
       teaser: "Dibuja rostros a carboncillo de espaldas al bullicio de la feria.",
       portrait: 0,
     },
-    pin: { top: 53, left: 33, color: "#7B1FA2" },
+    pin: { top: 63, left: 57, color: "#388E3C" },
     numeral: "II",
     title: "El caballete nocturno",
     paragraphs: [
@@ -216,7 +216,7 @@ export const chapters: Chapter[] = [
       teaser: "Toca una batería de tambores rescatados, sentado en la acera.",
       portrait: 1,
     },
-    pin: { top: 70, left: 65, color: "#388E3C" },
+    pin: { top: 87, left: 87, color: "#6D4C41" },
     numeral: "III",
     title: "Percusión en la acera",
     paragraphs: [
@@ -277,7 +277,7 @@ export const chapters: Chapter[] = [
       portrait: 1,
       portraitFocus: "center 55%",
     },
-    pin: { top: 83, left: 73, color: "#E65100" },
+    pin: { top: 73, left: 87, color: "#E65100" },
     numeral: "IV",
     title: "Canto entre pasos fugaces",
     paragraphs: [
@@ -340,7 +340,7 @@ export const chapters: Chapter[] = [
       portrait: 0,
       portraitFocus: "center 35%",
     },
-    pin: { top: 86, left: 86, color: "#6D4C41" },
+    pin: { top: 42, left: 30, color: "#7B1FA2" },
     numeral: "V",
     title: "Sobre ruedas en la noche",
     paragraphs: [

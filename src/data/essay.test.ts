@@ -4,11 +4,11 @@ import { chapters } from "./essay";
 describe("Mapa de artistas", () => {
   it("tiene un marcador por artista, en orden y con el color pedido", () => {
     expect(chapters.map((c) => [c.artist.name, c.pin.color])).toEqual([
-      ["Porto", "#3E2B22"],
-      ["Jean", "#7B1FA2"],
-      ["Carlos", "#388E3C"],
-      ["Lugo", "#E65100"],
-      ["Briss", "#6D4C41"],
+      ["Fernando Portocarrero", "#3E2B22"],
+      ["Jean Carlo", "#388E3C"],
+      ["Carlos Antonio", "#6D4C41"],
+      ["Luis Lugo", "#E65100"],
+      ["Priss Azabache", "#7B1FA2"],
     ]);
   });
 
