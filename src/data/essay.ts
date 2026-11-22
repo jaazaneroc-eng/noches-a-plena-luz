@@ -83,10 +83,10 @@ const img = (name: string) => `/assets/images/${name}`;
 const audio = (name: string) => `/assets/audio/${name}`;
 
 export const essay = {
-  title: "Lo que la noche sostiene",
+  title: "ACAPAR ARTE",
   subtitle:
     "Cinco oficios, cinco presencias: un recorrido por las calles del centro de Trujillo cuando la ciudad baja la voz y la plaza se vuelve escenario.",
-  kicker: "Fotoensayo multimedia",
+  kicker: "Fotorreportaje interactivo",
   author: "Johan Salvador Azañero",
   date: "Octubre – Noviembre 2026",
   location: "Centro Histórico de Trujillo, Perú",
@@ -115,7 +115,7 @@ export const chapters: Chapter[] = [
       teaser: "Ofrece la Luna por unas monedas a los pies del Monumento a la Libertad.",
       portrait: 0,
     },
-    pin: { top: 33, left: 48, color: "#3E2B22" },
+    pin: { top: 30, left: 46, color: "#3E2B22" },
     numeral: "I",
     title: "El telescopio en la plaza",
     paragraphs: [
@@ -166,7 +166,7 @@ export const chapters: Chapter[] = [
       teaser: "Dibuja rostros a carboncillo de espaldas al bullicio de la feria.",
       portrait: 0,
     },
-    pin: { top: 63, left: 57, color: "#388E3C" },
+    pin: { top: 60, left: 56, color: "#388E3C" },
     numeral: "II",
     title: "El caballete nocturno",
     paragraphs: [
@@ -216,7 +216,7 @@ export const chapters: Chapter[] = [
       teaser: "Toca una batería de tambores rescatados, sentado en la acera.",
       portrait: 1,
     },
-    pin: { top: 87, left: 87, color: "#6D4C41" },
+    pin: { top: 84, left: 86, color: "#6D4C41" },
     numeral: "III",
     title: "Percusión en la acera",
     paragraphs: [
@@ -277,7 +277,7 @@ export const chapters: Chapter[] = [
       portrait: 1,
       portraitFocus: "center 55%",
     },
-    pin: { top: 73, left: 87, color: "#E65100" },
+    pin: { top: 72, left: 80, color: "#E65100" },
     numeral: "IV",
     title: "Canto entre pasos fugaces",
     paragraphs: [
@@ -340,7 +340,7 @@ export const chapters: Chapter[] = [
       portrait: 0,
       portraitFocus: "center 35%",
     },
-    pin: { top: 42, left: 30, color: "#7B1FA2" },
+    pin: { top: 40, left: 32, color: "#7B1FA2" },
     numeral: "V",
     title: "Sobre ruedas en la noche",
     paragraphs: [

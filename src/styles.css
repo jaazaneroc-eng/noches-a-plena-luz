@@ -18,6 +18,7 @@
 @theme inline {
   --font-serif: "Newsreader", "Lora", Georgia, serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Archivo Black", "Inter", ui-sans-serif, sans-serif;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -50,6 +51,8 @@
   --color-lightbox: var(--lightbox);
   --color-lamp: var(--lamp);
   --color-scrim: var(--scrim);
+  --color-flame: var(--flame);
+  --color-flame-bright: var(--flame-bright);
 
   --shadow-pin: 0 2px 12px oklch(0 0 0 / 0.55);
   --shadow-card: 0 24px 60px -12px oklch(0 0 0 / 0.7);
@@ -71,6 +74,8 @@
   --lightbox: oklch(0.1591 0 0); /* #0D0D0D */
   --lamp: oklch(0.8 0.11 75); /* sodium street-lamp amber, used sparingly */
   --scrim: oklch(0.1591 0 0 / 0.55);
+  --flame: oklch(0.6237 0.1652 47.12); /* #D95B16 — naranja de la portada */
+  --flame-bright: oklch(0.72 0.16 50);
 
   --card: var(--surface);
   --card-foreground: var(--foreground);
@@ -213,6 +218,46 @@
   animation: pin-pulse 2.6s cubic-bezier(0.2, 0.6, 0.3, 1) infinite;
 }
 
+/* Portada ACAPAR ARTE */
+@utility text-outline-flame {
+  color: transparent;
+  -webkit-text-stroke: 2.5px var(--flame);
+}
+
+@keyframes swing {
+  0%,
+  100% {
+    rotate: -2.6deg;
+  }
+  50% {
+    rotate: 2.6deg;
+  }
+}
+@utility animate-swing {
+  animation: swing 5.5s ease-in-out infinite;
+  transform-origin: 50% -40px;
+}
+
+@keyframes cta-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.6237 0.1652 47.12 / 0.55);
+  }
+  60% {
+    box-shadow: 0 0 0 14px oklch(0.6237 0.1652 47.12 / 0);
+  }
+}
+@utility animate-cta-pulse {
+  animation: cta-pulse 2.4s ease-out infinite;
+}
+
+/* Perforaciones del carrete fotográfico */
+@utility film-edge {
+  background-image: radial-gradient(circle, var(--background) 3px, transparent 3.6px);
+  background-size: 20px 100%;
+  background-position: center;
+}
+
 /* Range inputs for the audio player */
 @utility range-thin {
   appearance: none;
@@ -300,6 +345,10 @@
   .pin-pulse {
     animation: none;
     opacity: 0;
+  }
+  .animate-swing,
+  .animate-cta-pulse {
+    animation: none;
   }
   .reveal {
     opacity: 1;
