@@ -24,7 +24,7 @@ export function ChronicleWall() {
         {chapters.map((c, i) => {
           const portrait = c.photos[c.artist.portrait];
           return (
-            <Reveal key={c.id} className={i === 0 ? "sm:col-span-2" : undefined}>
+            <Reveal key={c.id} className={i === 0 ? "sm:col-span-2" : ""}>
               <Link
                 to="/artistas/$slug"
                 params={{ slug: c.slug }}
