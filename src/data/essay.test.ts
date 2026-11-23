@@ -22,6 +22,10 @@ describe("Mapa de artistas", () => {
     }
   });
 
+  it("da a cada uno de los 5 artistas un video de YouTube", () => {
+    expect(chapters.filter((c) => c.video?.youtubeId).length).toBe(5);
+  });
+
   it("da a cada artista una dirección propia", () => {
     expect(new Set(chapters.map((c) => c.slug)).size).toBe(chapters.length);
   });

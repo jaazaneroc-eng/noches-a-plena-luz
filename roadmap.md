@@ -7,3 +7,4 @@
 5. [x] "Muro de Crónicas y Perfiles" (tarjetas por artista)
 6. [x] Tokens naranja #D95B16 + fuente display en styles.css/__root
 7. [x] Verificar en navegador (desktop + móvil) y commit
+8. [x] Apartado de videos de YouTube, uno por artista

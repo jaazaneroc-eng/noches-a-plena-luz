@@ -5,6 +5,7 @@ import { GalleryStrip } from "@/components/essay/GalleryStrip";
 import { Hero } from "@/components/essay/Hero";
 import { LightboxProvider } from "@/components/essay/Lightbox";
 import { MapIndex } from "@/components/essay/MapIndex";
+import { VideoSection } from "@/components/essay/VideoSection";
 import { VoicesSection } from "@/components/essay/VoicesSection";
 import { essay } from "@/data/essay";
 
@@ -32,6 +33,7 @@ function Index() {
       </LightboxProvider>
       <main>
         <VoicesSection />
+        <VideoSection />
         <ChronicleWall />
         <EssayIntro />
       </main>

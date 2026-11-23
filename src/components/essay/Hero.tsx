@@ -141,7 +141,7 @@ export function Hero() {
       {/* Cámara colgante */}
       <div
         ref={camRef}
-        className="absolute right-[4%] top-0 z-10 hidden w-44 will-change-transform sm:block md:w-60 lg:right-[8%] lg:w-72"
+        className="absolute right-[3%] top-10 z-10 hidden w-40 will-change-transform lg:block xl:right-[6%] xl:w-56"
       >
         <HangingCamera />
       </div>

@@ -206,6 +206,11 @@ export const chapters: Chapter[] = [
       title: "Testimonio de voz — El retratista",
       description: "Grabación de campo",
     },
+    video: {
+      youtubeId: "aqz-KE-bpKQ",
+      title: "Video — Jean Carlo, el pintor errante",
+      poster: img("jean_1.jpg"),
+    },
   },
   {
     id: "capitulo-3",
@@ -265,6 +270,11 @@ export const chapters: Chapter[] = [
       src: audio("percusion-acera.mp3"),
       title: "Ambiente sonoro — Ritmo en la acera",
       description: "Percusión callejera",
+    },
+    video: {
+      youtubeId: "aqz-KE-bpKQ",
+      title: "Video — Carlos Antonio, manos imparables",
+      poster: img("carlos_2.jpg"),
     },
   },
   {
@@ -375,6 +385,11 @@ export const chapters: Chapter[] = [
       src: audio("ruedas-noche.ogg"),
       title: "Ambiente sonoro — Ruedas sobre piedra",
       description: "Patines en la plaza",
+    },
+    video: {
+      youtubeId: "aqz-KE-bpKQ",
+      title: "Video — Priss Azabache, la dama del asfalto",
+      poster: img("briss_1.jpg"),
     },
   },
 ];
