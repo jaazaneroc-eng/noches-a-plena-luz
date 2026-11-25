@@ -22,7 +22,8 @@ export function useLightbox() {
 
 const pad = (n: number) => n.toString().padStart(2, "0");
 
-const chapterOf = (photo: Photo) => chapters.find((c) => c.photos.some((p) => p.id === photo.id));
+const chapterOf = (photo: Photo) =>
+  chapters.find((c) => (c.gallery ?? c.photos).some((p) => p.id === photo.id));
 
 /** `photos` limita el recorrido del visor (por defecto, todas las fotos del ensayo). */
 export function LightboxProvider({

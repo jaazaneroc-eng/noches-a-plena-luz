@@ -41,7 +41,7 @@ function ArtistPage() {
   const next = chapters[(i + 1) % chapters.length]!;
 
   return (
-    <LightboxProvider key={chapter.id} photos={chapter.photos}>
+    <LightboxProvider key={chapter.id} photos={chapter.gallery ?? chapter.photos}>
       <ReadingProgress />
       <BackToIndex className="fixed left-4 top-4 z-40 sm:left-6 sm:top-6" />
 

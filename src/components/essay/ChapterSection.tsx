@@ -5,17 +5,18 @@ import { Reveal } from "./Reveal";
 import { YouTubeEmbed } from "./YouTubeEmbed";
 
 function Gallery({ chapter }: { chapter: Chapter }) {
-  const [a, b] = chapter.photos;
+  const photos = chapter.gallery ?? chapter.photos;
+  const [a, b] = photos;
+  if (!a || !b) return null;
 
   if (chapter.layout === "stacked") {
     return (
       <div className="flex flex-col gap-10 md:gap-14">
-        <Reveal>
-          <PhotoFigure photo={a} captionClassName="px-5 md:px-10" />
-        </Reveal>
-        <Reveal>
-          <PhotoFigure photo={b} captionClassName="px-5 md:px-10" />
-        </Reveal>
+        {photos.map((photo, i) => (
+          <Reveal key={photo.id}>
+            <PhotoFigure photo={photo} index={i + 1} captionClassName="px-5 md:px-10" />
+          </Reveal>
+        ))}
       </div>
     );
   }

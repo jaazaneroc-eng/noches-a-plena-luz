@@ -72,6 +72,8 @@ export type Chapter = {
   quote?: { text: string; attribution?: string };
   layout: ChapterLayout;
   photos: [Photo, Photo];
+  /** Galería ampliada solo para la página del capítulo (no aparece en el mapa ni en la portada). */
+  gallery?: Photo[];
   audio: AudioTrack;
   video?: VideoBlock;
 };
@@ -141,6 +143,58 @@ export const chapters: Chapter[] = [
         src: img("porto_2.jpg"),
         alt: "Perfil del astrónomo mirando por el ocular, con la estatua iluminada de rosa al fondo",
         caption: "El monumento cambia de color; la mirada sigue fija en el cielo.",
+        width: 1920,
+        height: 1006,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+    ],
+    gallery: [
+      {
+        id: "porto-3",
+        src: img("porto_3.jpg"),
+        alt: "Varios transeúntes reunidos frente al telescopio en la Plaza de Armas bajo la luna creciente",
+        caption:
+          "Testigos de la luna — Bajo la luz de la luna creciente, varios transeúntes se reúnen frente al telescopio en la Plaza de Armas, convirtiendo el espacio público en un punto de encuentro con la astronomía.",
+        width: 1920,
+        height: 1006,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "porto-4",
+        src: img("porto_4.jpg"),
+        alt: "Dos personas observan con asombro a través del telescopio en la plaza de noche",
+        caption:
+          "Mirar lo lejano — Dos personas observan con asombro a través del telescopio, descubriendo la fascinación del cielo nocturno en medio de la plaza.",
+        width: 1920,
+        height: 1006,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "porto-5",
+        src: img("porto_5.jpg"),
+        alt: "El aficionado apunta el telescopio hacia la luna creciente con un láser verde",
+        caption:
+          "Trazar el cielo — El aficionado apunta el telescopio hacia la luna creciente con ayuda de un láser verde, demostrando su dedicación a la divulgación astronómica.",
+        width: 1536,
+        height: 1920,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "porto-6",
+        src: img("porto_6.jpg"),
+        alt: "El observador enfoca el firmamento con el telescopio frente al Monumento a la Libertad iluminado de azul",
+        caption:
+          "El cielo sobre el monumento — El observador enfoca el firmamento a través del telescopio, mientras el monumento a la Libertad une el patrimonio histórico con la ciencia.",
+        width: 1920,
+        height: 1080,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "porto-7",
+        src: img("porto_7.jpg"),
+        alt: "El divulgador sonríe mientras manipula el telescopio en la plaza de noche",
+        caption:
+          "El rostro del asombro — Con una amplia sonrisa, el divulgador manipula el telescopio y transmite su entusiasmo por acercar la ciencia a las personas.",
         width: 1920,
         height: 1006,
         exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },

@@ -10,14 +10,17 @@ export function PhotoFigure({
   className,
   captionClassName,
   priority = false,
+  index,
 }: {
   photo: Photo;
   className?: string;
   captionClassName?: string;
   priority?: boolean;
+  /** Número de la foto dentro de su galería (si no se da, se busca en el ensayo completo). */
+  index?: number;
 }) {
   const { open } = useLightbox();
-  const n = allPhotos.findIndex((p) => p.id === photo.id) + 1;
+  const n = index ?? allPhotos.findIndex((p) => p.id === photo.id) + 1;
 
   return (
     <figure className={cn("min-w-0", className)}>
