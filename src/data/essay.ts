@@ -435,6 +435,58 @@ export const chapters: Chapter[] = [
         exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
       },
     ],
+    gallery: [
+      {
+        id: "briss-3",
+        src: img("briss_3.jpg"),
+        alt: "Patinadora con casco personalizado y coderas posa de frente señalando a la cámara",
+        caption:
+          "Fuerza y rodaje — La joven patinadora posa con seguridad frente a la cámara, mostrando su indumentaria deportiva y casco personalizado.",
+        width: 1536,
+        height: 1920,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "briss-4",
+        src: img("briss_4.jpg"),
+        alt: "Patinadora con los brazos abiertos frente al monumento iluminado de verde",
+        caption:
+          "Brazos al viento — Con los brazos extendidos, la patinadora demuestra su equilibrio y confianza frente al monumento iluminado de la plaza.",
+        width: 1536,
+        height: 1920,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "briss-5",
+        src: img("briss_5.png"),
+        alt: "Patinadora cruza en movimiento sobre patines frente al monumento a la Libertad",
+        caption:
+          "Rodar en la historia — La patinadora cruza en movimiento frente al monumento a la Libertad, mostrando su agilidad sobre ruedas.",
+        width: 1070,
+        height: 602,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "briss-6",
+        src: img("briss_6.jpg"),
+        alt: "Patinadora se desplaza con un brazo extendido para mantener el equilibrio frente al monumento",
+        caption:
+          "Equilibrio monumental — La joven se desplaza con un brazo extendido para mantener el equilibrio frente al monumento iluminado.",
+        width: 1080,
+        height: 1616,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "briss-7",
+        src: img("briss_7.jpg"),
+        alt: "Patinadora posa con su equipo de protección frente al monumento con luz rosada",
+        caption:
+          "Brillo en el patín — La patinadora posa con su equipo de protección frente al monumento, transmitiendo seguridad y pasión por el deporte.",
+        width: 1536,
+        height: 1920,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+    ],
     audio: {
       src: audio("ruedas-noche.ogg"),
       title: "Ambiente sonoro — Ruedas sobre piedra",

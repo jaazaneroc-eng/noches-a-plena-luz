@@ -1,22 +1,20 @@
-import type { Chapter } from "@/data/essay";
+import type { Chapter, Photo } from "@/data/essay";
 import { AudioPlayer } from "./AudioPlayer";
 import { PhotoFigure } from "./PhotoFigure";
 import { Reveal } from "./Reveal";
 import { YouTubeEmbed } from "./YouTubeEmbed";
 
-function Gallery({ chapter }: { chapter: Chapter }) {
-  const photos = chapter.gallery ?? chapter.photos;
-  const [a, b] = photos;
-  if (!a || !b) return null;
-
+/** Las dos fotos principales del capítulo, con el encuadre de su layout. */
+function Pair({ chapter, a, b }: { chapter: Chapter; a: Photo; b: Photo }) {
   if (chapter.layout === "stacked") {
     return (
       <div className="flex flex-col gap-10 md:gap-14">
-        {photos.map((photo, i) => (
-          <Reveal key={photo.id}>
-            <PhotoFigure photo={photo} index={i + 1} captionClassName="px-5 md:px-10" />
-          </Reveal>
-        ))}
+        <Reveal>
+          <PhotoFigure photo={a} index={1} captionClassName="px-5 md:px-10" />
+        </Reveal>
+        <Reveal delay={120}>
+          <PhotoFigure photo={b} index={2} captionClassName="px-5 md:px-10" />
+        </Reveal>
       </div>
     );
   }
@@ -25,10 +23,10 @@ function Gallery({ chapter }: { chapter: Chapter }) {
     return (
       <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-10 px-0 sm:grid-cols-2 sm:gap-3 sm:px-3 md:gap-4 md:px-6">
         <Reveal>
-          <PhotoFigure photo={a} captionClassName="px-5 sm:px-0" />
+          <PhotoFigure photo={a} index={1} captionClassName="px-5 sm:px-0" />
         </Reveal>
         <Reveal className="sm:mt-28" delay={120}>
-          <PhotoFigure photo={b} captionClassName="px-5 sm:px-0" />
+          <PhotoFigure photo={b} index={2} captionClassName="px-5 sm:px-0" />
         </Reveal>
       </div>
     );
@@ -38,13 +36,38 @@ function Gallery({ chapter }: { chapter: Chapter }) {
   return (
     <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-[3fr_2fr] md:gap-3 md:px-3 lg:gap-4 lg:px-4">
       <Reveal>
-        <PhotoFigure photo={a} captionClassName="px-5 md:px-0" />
+        <PhotoFigure photo={a} index={1} captionClassName="px-5 md:px-0" />
       </Reveal>
       <Reveal delay={120}>
-        <PhotoFigure photo={b} captionClassName="px-5 md:px-0" />
+        <PhotoFigure photo={b} index={2} captionClassName="px-5 md:px-0" />
       </Reveal>
     </div>
   );
+}
+
+function Gallery({ chapter }: { chapter: Chapter }) {
+  const photos = chapter.gallery ?? chapter.photos;
+  const [a, b] = photos;
+  if (!a || !b) return null;
+
+  const head = <Pair chapter={chapter} a={a} b={b} />;
+
+  // Galería ampliada (solo se ve en la página del capítulo): las dos primeras
+  // conservan el encuadre del capítulo y el resto se apila debajo, en orden.
+  if (photos.length > 2) {
+    return (
+      <div className="flex flex-col gap-10 md:gap-14">
+        {head}
+        {photos.slice(2).map((photo, i) => (
+          <Reveal key={photo.id}>
+            <PhotoFigure photo={photo} index={i + 3} captionClassName="px-5 md:px-10" />
+          </Reveal>
+        ))}
+      </div>
+    );
+  }
+
+  return head;
 }
 
 export function ChapterSection({ chapter }: { chapter: Chapter }) {
