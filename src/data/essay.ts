@@ -255,13 +255,65 @@ export const chapters: Chapter[] = [
         },
       },
     ],
+    gallery: [
+      {
+        id: "jean-3",
+        src: img("jean_3.jpg"),
+        alt: "Tres retratos dibujados apoyados junto a una silla plegable en la vereda de la plaza",
+        caption:
+          "Arte en guardia — Tres retratos descansan junto a una silla plegable, convirtiendo la vereda de la Plaza de Armas en una pequeña galería al aire libre.",
+        width: 1920,
+        height: 1080,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "jean-4",
+        src: img("jean_4.jpg"),
+        alt: "Retratista de espaldas frente a su caballete y sus retratos, con la feria iluminada al fondo",
+        caption:
+          "Espaldas al bullicio — El retratista trabaja concentrado junto a su caballete, mientras la actividad nocturna de la plaza continúa a sus espaldas.",
+        width: 1920,
+        height: 1080,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "jean-5",
+        src: img("jean_5.jpg"),
+        alt: "Vista cenital del artista dibujando un retrato a lápiz mientras sostiene su teléfono con la foto de referencia",
+        caption:
+          "El detalle en proceso — El artista utiliza una imagen de su teléfono como referencia para plasmar cuidadosamente el retrato sobre el papel.",
+        width: 1920,
+        height: 1080,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "jean-6",
+        src: img("jean_6.jpg"),
+        alt: "Retratista de pie recogiendo sus materiales frente a una fachada colonial iluminada",
+        caption:
+          "Cierre de sesión — El retratista recoge sus materiales frente a la arquitectura colonial iluminada, dando por terminada su jornada.",
+        width: 1080,
+        height: 1920,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "jean-7",
+        src: img("jean_7.png"),
+        alt: "Artista se aleja de espaldas por la plaza con el caballete al hombro y una bolsa verde",
+        caption:
+          "Fin del trazo — El artista se aleja con su caballete al hombro, llevando consigo sus herramientas tras finalizar su trabajo.",
+        width: 1291,
+        height: 808,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+    ],
     audio: {
       src: audio("caballete-nocturno.mp3"),
       title: "Testimonio de voz — El retratista",
       description: "Grabación de campo",
     },
     video: {
-      youtubeId: "aqz-KE-bpKQ",
+      youtubeId: "3UtkimU5n5s",
       title: "Video — Jean Carlo, el pintor errante",
       poster: img("jean_1.jpg"),
     },

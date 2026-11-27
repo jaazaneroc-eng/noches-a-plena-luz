@@ -26,6 +26,10 @@ describe("Mapa de artistas", () => {
     expect(chapters.filter((c) => c.video?.youtubeId).length).toBe(5);
   });
 
+  it("usa el video real de Jean Carlo, no el de muestra", () => {
+    expect(chapters.find((c) => c.slug === "jean")?.video?.youtubeId).toBe("3UtkimU5n5s");
+  });
+
   it("da a cada artista una dirección propia", () => {
     expect(new Set(chapters.map((c) => c.slug)).size).toBe(chapters.length);
   });
@@ -45,6 +49,16 @@ describe("Galerías ampliadas de capítulo", () => {
     ]);
   });
 
+  it("muestra las fotos de Jean en el orden pedido", () => {
+    expect(titles("jean")).toEqual([
+      "Arte en guardia",
+      "Espaldas al bullicio",
+      "El detalle en proceso",
+      "Cierre de sesión",
+      "Fin del trazo",
+    ]);
+  });
+
   it("muestra las fotos de Fernando en el orden pedido", () => {
     expect(titles("porto")).toEqual([
       "Testigos de la luna",
@@ -57,7 +71,7 @@ describe("Galerías ampliadas de capítulo", () => {
 
   it("mantiene las fotos de galería fuera del mapa y la portada", () => {
     const galleryIds = chapters.flatMap((c) => (c.gallery ?? []).map((p) => p.id));
-    expect(galleryIds.length).toBe(10);
+    expect(galleryIds.length).toBe(15);
     for (const id of galleryIds) {
       expect(allPhotos.some((p) => p.id === id)).toBe(false);
     }
