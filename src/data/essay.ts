@@ -206,7 +206,7 @@ export const chapters: Chapter[] = [
       description: "Murmullo de la Plaza de Armas",
     },
     video: {
-      youtubeId: "aqz-KE-bpKQ",
+      youtubeId: "KFCY2xoJIow",
       title: "Documental — Noches en la plaza",
       poster: img("porto_2.jpg"),
     },
@@ -389,7 +389,7 @@ export const chapters: Chapter[] = [
       description: "Voz y ambiente",
     },
     video: {
-      youtubeId: "aqz-KE-bpKQ",
+      youtubeId: "ho92qeOIeLU",
       title: "Fragmento — Canto en el centro",
       poster: img("lugo_1.jpg"),
     },
@@ -441,7 +441,7 @@ export const chapters: Chapter[] = [
       description: "Patines en la plaza",
     },
     video: {
-      youtubeId: "aqz-KE-bpKQ",
+      youtubeId: "tMi6fMegbFs",
       title: "Video — Priss Azabache, la dama del asfalto",
       poster: img("briss_1.jpg"),
     },
