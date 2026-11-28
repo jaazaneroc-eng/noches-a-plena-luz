@@ -435,6 +435,58 @@ export const chapters: Chapter[] = [
         },
       },
     ],
+    gallery: [
+      {
+        id: "lugo-3",
+        src: img("lugo_3.jpg"),
+        alt: "Músico callejero canta sentado junto a una pared mientras los transeúntes pasan desenfocados a su alrededor",
+        caption:
+          "Voz entre los pasos — Un músico callejero canta junto a la pared, mientras los transeúntes pasan apresurados a su alrededor.",
+        width: 1616,
+        height: 1080,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "lugo-4",
+        src: img("lugo_4.png"),
+        alt: "Cantante sentado en un banco plástico abraza a su hijo dormido mientras sostiene el micrófono",
+        caption:
+          "Canto y abrigo — El cantante sostiene el micrófono mientras abraza a su hijo dormido, combinando su labor musical con el cuidado familiar.",
+        width: 1009,
+        height: 1510,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "lugo-5",
+        src: img("lugo_5.jpg"),
+        alt: "Músico canta con micrófono junto a su parlante en la vereda, acompañado por sus dos hijos",
+        caption:
+          "La voz de la esquina — El músico interpreta sus canciones junto a su parlante, acompañado por sus hijos en la vereda.",
+        width: 1080,
+        height: 1616,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "lugo-6",
+        src: img("lugo_6.jpg"),
+        alt: "Transeúnte inclinado deja una moneda en el suelo junto al cantante que sostiene a su hijo y el micrófono",
+        caption:
+          "Monedas de gratitud — Un transeúnte entrega una moneda al cantante callejero, mostrando un gesto de apoyo hacia su trabajo artístico.",
+        width: 1080,
+        height: 1616,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+      {
+        id: "lugo-7",
+        src: img("lugo_7.jpg"),
+        alt: "Primer plano del músico con el micrófono en la boca y su hijo dormido entre sus brazos, junto al altavoz",
+        caption:
+          "Dulces Sueños — El músico sostiene el micrófono mientras su hijo duerme entre sus brazos, retratando la intimidad de su vida familiar.",
+        width: 1616,
+        height: 1080,
+        exif: { camera: NA, lens: NA, aperture: NA, shutter: NA, iso: NA, date: NA },
+      },
+    ],
     audio: {
       src: audio("canto-pasos.mp3"),
       title: "Testimonio de voz — Canto en la vereda",

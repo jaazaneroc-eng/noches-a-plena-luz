@@ -69,9 +69,19 @@ describe("Galerías ampliadas de capítulo", () => {
     ]);
   });
 
+  it("muestra las fotos de Luis Lugo en el orden pedido", () => {
+    expect(titles("lugo")).toEqual([
+      "Voz entre los pasos",
+      "Canto y abrigo",
+      "La voz de la esquina",
+      "Monedas de gratitud",
+      "Dulces Sueños",
+    ]);
+  });
+
   it("mantiene las fotos de galería fuera del mapa y la portada", () => {
     const galleryIds = chapters.flatMap((c) => (c.gallery ?? []).map((p) => p.id));
-    expect(galleryIds.length).toBe(15);
+    expect(galleryIds.length).toBe(20);
     for (const id of galleryIds) {
       expect(allPhotos.some((p) => p.id === id)).toBe(false);
     }
