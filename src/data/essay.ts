@@ -89,8 +89,8 @@ export const essay = {
   subtitle:
     "Cinco oficios, cinco presencias: un recorrido por las calles del centro de Trujillo cuando la ciudad baja la voz y la plaza se vuelve escenario.",
   kicker: "Fotorreportaje interactivo",
-  author: "Johan Salvador Azañero",
-  date: "Octubre – Noviembre 2026",
+  author: "Azañero Chunga Johan Alexander Salvador\nGuerrero Macha Piero Valentino\nHuailas Valentin Bruno Alexandro\nRojas Rodriguez Diego Alberto\nSanta María Jaureguizar Mathias Jahir",
+  date: "Octubre – Diciembre 2026",
   location: "Centro Histórico de Trujillo, Perú",
   cover: img("porto_1.jpg"),
   /** Fotografía aérea de la plaza usada como índice interactivo. */
@@ -207,7 +207,7 @@ export const chapters: Chapter[] = [
     },
     video: {
       youtubeId: "KFCY2xoJIow",
-      title: "Documental — Noches en la plaza",
+      title: 'Fernando Portocarrero — "El Cazador de Astros"',
       poster: img("porto_2.jpg"),
     },
   },
@@ -314,7 +314,7 @@ export const chapters: Chapter[] = [
     },
     video: {
       youtubeId: "3UtkimU5n5s",
-      title: "Video — Jean Carlo, el pintor errante",
+      title: 'Jean Carlo - "El Pintor Errante"',
       poster: img("jean_1.jpg"),
     },
   },
@@ -379,7 +379,7 @@ export const chapters: Chapter[] = [
     },
     video: {
       youtubeId: "aqz-KE-bpKQ",
-      title: "Video — Carlos Antonio, manos imparables",
+      title: 'Carlos Antonio - "Manos Imparables"',
       poster: img("carlos_2.jpg"),
     },
   },
@@ -494,7 +494,7 @@ export const chapters: Chapter[] = [
     },
     video: {
       youtubeId: "ho92qeOIeLU",
-      title: "Fragmento — Canto en el centro",
+      title: 'Luis Lugo - "La Voz Paternal"',
       poster: img("lugo_1.jpg"),
     },
   },
@@ -598,7 +598,7 @@ export const chapters: Chapter[] = [
     },
     video: {
       youtubeId: "tMi6fMegbFs",
-      title: "Video — Priss Azabache, la dama del asfalto",
+      title: 'Priss Azabache - "La Dama del Asfalto"',
       poster: img("briss_1.jpg"),
     },
   },

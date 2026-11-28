@@ -59,7 +59,7 @@ export function EssayFooter() {
         </p>
         <dl className="grid grid-cols-1 gap-4 text-sm sm:grid-cols-3">
           <div>
-            <dt className="text-muted-foreground">Fotografía</dt>
+            <dt className="text-muted-foreground">Fotografos</dt>
             <dd className="mt-1 text-foreground">{essay.author}</dd>
           </div>
           <div>
